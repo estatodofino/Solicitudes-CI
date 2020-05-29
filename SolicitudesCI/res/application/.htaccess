@@ -1,0 +1,9 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On 
+    RewriteCond %{REQUEST_FILENAME} !-f 
+    RewriteCond %{REQUEST_FILENAME} !-d 
+    RewriteRule ^(.*)$ /formulario_cod_ajax/index.php/$1 [L] 
+</IfModule>
+<IfModule !mod_rewrite.c>
+    ErrorDocument 404 /formulario_cod_ajax/index.php 
+</IfModule>
